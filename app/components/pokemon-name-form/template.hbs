@@ -1,0 +1,22 @@
+<!-- <input class="pokemon-search" name="pokemon[identifier]" id="pokemon[identifier]" type="text" placeholder="Name of Pokemon" required> -->
+<!-- {{email-input email=credentials.email}}
+{{password-input password=credentials.password}}
+
+<button type="submit" class="btn btn-primary" {{action "submit"}}>
+  Sign In
+</button>
+
+<button class="btn btn-default" {{action "reset"}}>
+  Cancel
+</button> -->
+
+
+{{input type="text"
+      id="pokemon-name"
+      placeholder="Name of Pokemon"
+      value=identifier
+}}
+
+<button type="submit" class="btn btn-primary" {{action "submit"}}>
+  Find
+</button>

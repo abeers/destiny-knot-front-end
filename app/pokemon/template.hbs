@@ -1,5 +1,7 @@
 <h1>{{model.identifier}}</h1>
 
+{{pokemon-name-form submit="submit" reset="reset"}}
+
 <h2>
   {{#each model.types as |type|}}
     {{type.identifier}}
