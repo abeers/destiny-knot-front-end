@@ -1,6 +1,5 @@
-{{#link-to 'pokemons'}}{{navbar-footer/team-member}}{{/link-to}}
-{{#link-to 'pokemons'}}{{navbar-footer/team-member}}{{/link-to}}
-{{#link-to 'pokemons'}}{{navbar-footer/team-member}}{{/link-to}}
-{{#link-to 'pokemons'}}{{navbar-footer/team-member}}{{/link-to}}
-{{#link-to 'pokemons'}}{{navbar-footer/team-member}}{{/link-to}}
-{{#link-to 'pokemons'}}{{navbar-footer/team-member}}{{/link-to}}
+{{#each team.pokemons as |pokemon|}}
+{{#link-to 'pokemon' pokemon}}
+<btn class="col-md-2 btn btn-default">{{pokemon.identifier}}</btn>
+{{/link-to}}
+{{/each}}

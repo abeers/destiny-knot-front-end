@@ -13,6 +13,7 @@ Router.map(function () {
   this.route('pokemons');
   this.route('types');
   this.route('pokemon', { path: '/pokemons/:pokemon_id'});
+  this.route('team', {path: '/teams/:team_id'});
 });
 
 export default Router;
