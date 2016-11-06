@@ -1,5 +1,9 @@
 {{#each team.pokemons as |pokemon|}}
-{{#link-to 'pokemon' pokemon}}
-<btn class="col-md-2 btn btn-default">{{pokemon.identifier}}</btn>
-{{/link-to}}
+  {{#link-to 'pokemon' pokemon}}
+  <btn class="col-md-2 btn btn-default">{{pokemon.identifier}}</btn>
+  {{/link-to}}
 {{/each}}
+
+{{#if team.isNotFull}}
+  <btn class="col-md-2 btn btn-default">Add Pokemon</btn>
+{{/if}}
