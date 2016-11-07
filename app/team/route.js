@@ -6,8 +6,6 @@ export default Ember.Route.extend({
   },
   actions: {
     view (team, pokemon) {
-      console.log('pokemon', pokemon);
-      console.log('team', team);
       let idParams = {
         pokemon_id: pokemon.get('id'),
         team_id: team.get('id')

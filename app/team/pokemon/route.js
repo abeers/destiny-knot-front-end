@@ -11,7 +11,7 @@ export default Ember.Route.extend({
       // console.log(records);
       return this.get('store').query('pokemon', {identifier: identifier})
       .then((record) => {
-        this.transitionTo('pokemon', record.objectAt(0));
+        this.transitionTo('team.pokemon', record.objectAt(0));
       })
       .catch(() => {
         this.get('flashMessages')

@@ -2,7 +2,5 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   identifier: DS.attr('string'),
-  types: DS.hasMany('type'),
-  teams: DS.hasMany('team'),
-  abilities: DS.hasMany('ability')
+  pokemons: DS.hasMany('pokemon')
 });
