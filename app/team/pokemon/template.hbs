@@ -16,16 +16,16 @@
       <option value={{ability.id}}>{{ability.identifier}}</option>
     {{/each}}
   </select>
+
+
+  {{#each model.pokemon_stats as |statistic|}}
+    <h2>{{statistic.stat.identifier}}: {{statistic.base_stat}}</h2>
+  {{/each}}
+
 </div>
 
 <div class="col-md-6">
-  <h1>Types</h1>
-  <!-- {{#each model.types as |type|}}
-    <h3>{{type.identifier}}</h3>
-    {{#each type.type_efficacies as |efficacy|}}
-      <h4>{{efficacy.damage_type.identifier}}: {{efficacy.damage_factor}}</h4>
-    {{/each}}
-  {{/each}} -->
+  <h1>Type Effectiveness</h1>
   {{#each model.efficacy as |efficacy|}}
     <h4>{{efficacy.damage_type}}: {{efficacy.damage_factor}}</h4>
   {{/each}}

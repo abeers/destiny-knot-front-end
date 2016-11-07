@@ -8,6 +8,7 @@ export default ApplicationSerializer.extend(DS.EmbeddedRecordsMixin,{
   attrs: {
     types: {embedded: 'always'},
     teams: {embedded: 'always'},
-    abilities: {embedded: 'always'}
+    abilities: {embedded: 'always'},
+    pokemon_stats: {embedded: 'always'}
   },
 });
