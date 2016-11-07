@@ -1,12 +1,7 @@
-<h1>{{model.name}}</h1>
-<ul>
-{{#each model.pokemons as |pokemon|}}
-<li>{{pokemon.identifier}}</li>
-{{/each}}
-</ul>
+{{outlet}}
 
 <nav class="navbar navbar-default navbar-fixed-bottom">
   <div class="container">
-    {{navbar-footer team=model}}
+    {{navbar-footer team=model view='view'}}
   </div>
 </nav>

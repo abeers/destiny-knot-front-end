@@ -1,7 +1,5 @@
 {{#each team.pokemons as |pokemon|}}
-  {{#link-to 'pokemon' pokemon}}
-  <btn class="col-md-2 btn btn-default">{{pokemon.identifier}}</btn>
-  {{/link-to}}
+  {{#link-to 'team.pokemon' pokemon}}{{navbar-footer/team-member pokemon=pokemon view='view'}}{{/link-to}}
 {{/each}}
 
 {{#if team.isNotFull}}

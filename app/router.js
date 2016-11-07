@@ -10,10 +10,13 @@ Router.map(function () {
   this.route('sign-in');
   this.route('change-password');
   this.route('users');
-  this.route('pokemons');
+  // this.route('pokemons');
   this.route('types');
-  this.route('pokemon', { path: '/pokemons/:pokemon_id'});
+  // this.route('pokemon', { path: '/pokemons/:pokemon_id'});
   this.route('team', {path: '/teams/:team_id'});
+  this.route('team', {path: '/teams/:team_id'}, function() {
+    this.route('pokemon', {path:'/pokemons/:pokemon_id'});
+  });
 });
 
 export default Router;
