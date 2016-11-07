@@ -2,8 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model (params) {
-    console.log(params);
     return this.get('store').findRecord('pokemon', params.pokemon_id);
+    // let model = this.get('store').findRecord('pokemon', params.pokemon_id);
+    // console.log(model.get('identifier'));
+    // return model;
   },
   actions: {
     submit (identifier) {
