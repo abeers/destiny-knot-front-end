@@ -6,12 +6,5 @@ export default Ember.Route.extend({
     return this.get('store').findRecord('team', params.team_id);
   },
   actions: {
-    view (team, pokemon) {
-      let idParams = {
-        pokemon_id: pokemon.get('id'),
-        team_id: team.get('id')
-      };
-      this.transitionTo('team.pokemon', idParams);
-    }
   }
 });

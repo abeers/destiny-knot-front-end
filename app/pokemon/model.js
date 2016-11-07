@@ -5,7 +5,7 @@ export default DS.Model.extend({
   identifier: DS.attr('string'),
   types: DS.hasMany('type'),
   pokemon_stats: DS.hasMany('pokemon-stat'),
-  teams: DS.hasMany('team'),
+  // teams: DS.hasMany('team'),
   abilities: DS.hasMany('ability'),
   efficacy: Ember.computed(function () {
     let result = [];

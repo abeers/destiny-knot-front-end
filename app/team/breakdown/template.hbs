@@ -1,6 +1,6 @@
 <h3>Breakdown</h3>
 <ul>
-  {{#each model.pokemons as |pokemon|}}
-  <li>{{pokemon.identifier}}</li>
+  {{#each model.teamMembers as |member|}}
+  <li>{{member.pokemon.identifier}}</li>
   {{/each}}
 </ul>

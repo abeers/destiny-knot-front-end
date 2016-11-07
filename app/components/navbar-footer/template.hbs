@@ -1,5 +1,6 @@
-{{#each team.pokemons as |pokemon|}}
-  {{#link-to 'team.pokemon' pokemon}}{{navbar-footer/team-member pokemon=pokemon view='view'}}{{/link-to}}
+
+{{#each team.teamMembers as |member|}}
+  {{#link-to 'team.pokemon' member.pokemon}}{{navbar-footer/team-member pokemon=member.pokemon}}{{/link-to}}
 {{/each}}
 
 {{#if team.isNotFull}}

@@ -9,8 +9,6 @@ export default Ember.Route.extend({
   },
   actions: {
     submit (identifier) {
-      // let records = this.get('store').query('pokemon', { identifier: identifier });
-      // console.log(records);
       return this.get('store').query('pokemon', {identifier: identifier})
       .then((record) => {
         this.transitionTo('team.pokemon', record.objectAt(0));
