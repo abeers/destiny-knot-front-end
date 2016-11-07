@@ -1,24 +1,24 @@
-{{pokemon-name-form submit="submit" reset="reset"}}
+{{pokemon-name-form member=model submit="submit" reset="reset"}}
 
 <h2>{{model.efficacy.identifier}}</h2>
 
 <div class="col-md-6">
-  <h1>{{model.identifier}}</h1>
+  <h1>{{model.pokemon.identifier}}</h1>
   <h2>
-    {{#each model.types as |type|}}
+    {{#each model.pokemon.types as |type|}}
       {{type.identifier}}
     {{/each}}
   </h2>
 
   <!-- This may become a component -->
   <select>
-    {{#each model.abilities as |ability|}}
+    {{#each model.pokemon.abilities as |ability|}}
       <option value={{ability.id}}>{{ability.identifier}}</option>
     {{/each}}
   </select>
 
 
-  {{#each model.pokemon_stats as |statistic|}}
+  {{#each model.pokemon.pokemon_stats as |statistic|}}
     <h2>{{statistic.stat.identifier}}: {{statistic.base_stat}}</h2>
   {{/each}}
 
@@ -26,7 +26,7 @@
 
 <div class="col-md-6">
   <h1>Type Effectiveness</h1>
-  {{#each model.efficacy as |efficacy|}}
+  {{#each model.pokemon.efficacy as |efficacy|}}
     <h4>{{efficacy.damage_type}}: {{efficacy.damage_factor}}</h4>
   {{/each}}
 </div>

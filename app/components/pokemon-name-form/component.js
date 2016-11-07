@@ -8,7 +8,7 @@ export default Ember.Component.extend({
 
   actions: {
     submit () {
-      this.sendAction('submit', this.get('identifier'));
+      this.sendAction('submit', this.get('identifier'), this.get('member').get('id'));
     }
   },
 });

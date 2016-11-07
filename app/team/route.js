@@ -6,5 +6,6 @@ export default Ember.Route.extend({
     return this.get('store').findRecord('team', params.team_id);
   },
   actions: {
+
   }
 });
