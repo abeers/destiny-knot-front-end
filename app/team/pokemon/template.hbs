@@ -8,8 +8,8 @@
   {{/each}}
 </h2>
 
-<h3>
+<select>
   {{#each model.abilities as |ability|}}
-    {{ability.identifier}}
+    <option value={{ability.id}}>{{ability.identifier}}</option>
   {{/each}}
-</h3>
+</select>
