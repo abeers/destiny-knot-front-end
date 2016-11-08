@@ -20,12 +20,7 @@ export default Ember.Route.extend({
       });
     },
     deletePokemon(member) {
-      return this.get('store').findRecord('team-member', member.get('id'))
-      .then((record) => {
-        record.deleteRecord();
-        record.unloadRecord();
-        record.save();
-      })
+      return member.destroyRecord()
       .then(() => {
         this.transitionTo('team.breakdown');
       })
