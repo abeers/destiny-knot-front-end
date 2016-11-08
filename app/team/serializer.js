@@ -6,6 +6,6 @@ import DS from 'ember-data';
 
 export default ApplicationSerializer.extend(DS.EmbeddedRecordsMixin,{
   attrs: {
-    teamMembers: {embedded: 'always'},
+    teamMembers: {serialize: 'ids', deserialize: 'records'},
   },
 });

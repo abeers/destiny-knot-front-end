@@ -8,14 +8,29 @@ export default Ember.Route.extend({
     submit (identifier, id) {
       return this.get('store').query('pokemon', {identifier: identifier})
       .then((record) => {
-        let member = this.get('store').peekRecord('team-member', id);
-        member.set('pokemon', record.objectAt(0));
-        member.save();
+        if (record.objectAt(0)) {
+          let member = this.get('store').peekRecord('team-member', id);
+          member.set('pokemon', record.objectAt(0));
+          member.save();
+        }
       })
       .catch(() => {
         this.get('flashMessages')
         .danger('There was a problem. Please try again.');
       });
     },
+    deletePokemon(member) {
+      return this.get('store').findRecord('team-member', member.get('id'))
+      .then((record) => {
+        record.destroyRecord();
+      })
+      .then(() => {
+        this.transitionTo('team.breakdown');
+      })
+      .catch(() => {
+        this.get('flashMessages')
+        .danger('There was a problem. Please try again.');
+      });
+    }
   }
 });

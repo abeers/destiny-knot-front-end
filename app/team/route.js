@@ -8,14 +8,14 @@ export default Ember.Route.extend({
   actions: {
     addPokemon (team) {
       let newPokemon = this.get('store').createRecord('team-member', {team: team});
-      newPokemon.save();
-      // .then((record) => {
-      //
-      // })
-      // .catch(() => {
-      //   this.get('flashMessages')
-      //   .danger('There was a problem. Please try again.');
-      // });
+      newPokemon.save()
+      .then((record) => {
+        this.transitionTo('team.pokemon', record.get('id'));
+      })
+      .catch(() => {
+        this.get('flashMessages')
+        .danger('There was a problem. Please try again.');
+      });
     },
   }
 });
