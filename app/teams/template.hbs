@@ -3,7 +3,7 @@
 
 <ul>
 {{#each model as |team|}}
-  {{#link-to 'team' team}}
+  {{#link-to 'team.breakdown' team}}
     <li>{{team.name}}</li>
   {{/link-to}}
 {{/each}}

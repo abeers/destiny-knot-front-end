@@ -21,5 +21,23 @@ export default Ember.Route.extend({
         .danger('There was a problem. Please try again.');
       });
     },
+    editName (name, team) {
+      team.set('name', name);
+      return team.save()
+      .catch(() => {
+        this.get('flashMessages')
+        .danger('There was a problem. Please try again.');
+      });
+    },
+    deleteTeam (team) {
+      return team.destroyRecord()
+      .then(() => {
+        this.transitionTo('teams');
+      })
+      .catch(() => {
+        this.get('flashMessages')
+        .danger('There was a problem. Please try again.');
+      });
+    }
   }
 });
