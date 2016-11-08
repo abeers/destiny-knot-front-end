@@ -18,6 +18,7 @@ Router.map(function () {
     this.route('pokemon', {path:'/team_members/:member_id'});
     this.route('breakdown');
   });
+  this.route('teams');
 });
 
 export default Router;

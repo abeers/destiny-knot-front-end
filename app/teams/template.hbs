@@ -1,0 +1,13 @@
+<h2>Teams</h2>
+
+<ul>
+{{#each model as |team|}}
+  {{#link-to 'team' team}}
+    <li>{{team.name}}</li>
+  {{/link-to}}
+{{/each}}
+</ul>
+
+<p>
+  {{#link-to 'application'}}Back to home{{/link-to}}
+</p>
