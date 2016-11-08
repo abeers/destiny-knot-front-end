@@ -1,6 +1,2 @@
 <h3>Breakdown</h3>
-<ul>
-  {{#each model.teamMembers as |member|}}
-  <li>{{member.pokemon.identifier}}</li>
-  {{/each}}
-</ul>
+{{team-breakdown team=model}}

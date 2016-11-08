@@ -17,13 +17,13 @@ export default DS.Model.extend({
       efficacies.forEach((damageType, index) => {
         if (typeIndex === 0) {
           result[index] = {
-            damage_type: damageType.get('damage_type').get('identifier'),
-            damage_factor: damageType.get('damage_factor') / 100
+            damageType: damageType.get('damage_type').get('identifier'),
+            damageFactor: damageType.get('damage_factor') / 100
           };
         } else {
-          let oldFactor = result[index].damage_factor;
+          let oldFactor = result[index].damageFactor;
           let newFactor = damageType.get('damage_factor');
-          result[index].damage_factor = oldFactor * newFactor / 100;
+          result[index].damageFactor = oldFactor * newFactor / 100;
         }
       });
 

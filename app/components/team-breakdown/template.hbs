@@ -1,0 +1,8 @@
+<h3>Breakdown</h3>
+<div class="col-md-12">
+  <h1>Type Effectiveness</h1>
+  <h2>{{team.name}}</h2>
+  {{#each team.efficacy as |efficacy|}}
+    <h4>{{efficacy.damageType}}: {{efficacy.damageFactor}}</h4>
+  {{/each}}
+</div>
