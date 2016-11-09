@@ -1,8 +1,59 @@
-.active-member {
-  color: red;
-}
-
 body {
+  background: $lightgray;
+  font-family: $font-family;
   padding-bottom: 80px;
   text-transform: capitalize;
+}
+
+a {
+  color: green;
+}
+
+.btn {
+  margin: 10px 0;
+}
+
+.app-title {
+  color: $knotred;
+  font-size: $font-size;
+  text-align: center;
+}
+
+.navbar {
+  background: $black;
+}
+
+
+
+
+.bar-wrap {
+  position: relative;
+}
+
+.progress-marker {
+  width: 4px;
+  height: 25px;
+  position: absolute;
+  background: $knotred;
+  bottom: -5px;
+}
+
+.time-axis {
+  color: $charcoal;
+  display: block;
+  float: left;
+  width: 100%;
+  /*margin: 0px 0 10px 0;*/
+}
+
+.time-spot {
+  display: block;
+  float: left;
+  width: 12.5%;
+}
+
+.time-spot-end {
+  display: block;
+  float: left;
+  width: 6.25%;
 }

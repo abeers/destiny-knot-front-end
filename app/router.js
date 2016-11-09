@@ -13,10 +13,9 @@ Router.map(function () {
   // this.route('pokemons');
   this.route('types');
   // this.route('pokemon', { path: '/pokemons/:pokemon_id'});
-  this.route('team', {path: '/teams/:team_id'});
   this.route('team', {path: '/teams/:team_id'}, function() {
     this.route('pokemon', {path:'/team_members/:member_id'});
-    this.route('breakdown');
+    this.route('breakdown', {path:'/breakdown'});
   });
   this.route('teams');
 });

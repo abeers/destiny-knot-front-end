@@ -25,7 +25,7 @@ export default DS.Model.extend({
         if (memberIndex === 0) {
           result[index] = {
             damageType: indPokemon.damageType,
-            damageFactor: indPokemon.damageFactor === 0 ? 0.125 : indPokemon.damageFactor
+            damageFactor: indPokemon.damageFactor === 0 ? 0.125 : indPokemon.damageFactor,
           };
         } else {
           let oldFactor = result[index].damageFactor;
@@ -35,6 +35,18 @@ export default DS.Model.extend({
       });
     });
 
+    result.forEach((efficacy, index) => {
+      let initial = -12.5 * Math.log2(efficacy.damageFactor) + 50;
+      if (initial < 0) {
+        result[index].barMark = 0;
+      } else if (initial > 100) {
+        result[index].barMark = 100;
+      } else {
+        result[index].barMark = initial;
+      }
+    });
+
     return result;
-  })
+  }),
+
 });
