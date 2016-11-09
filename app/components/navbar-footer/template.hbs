@@ -3,6 +3,8 @@
   {{#link-to 'team.pokemon' member}}{{navbar-footer/team-member pokemon=member.pokemon}}{{/link-to}}
 {{/each}}
 
+{{#if team.isEditable}}
 {{#if team.isNotFull}}
   <btn class="col-md-2 btn btn-default" {{action 'addPokemon'}}>Add Pokemon</btn>
+{{/if}}
 {{/if}}

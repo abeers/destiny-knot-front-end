@@ -1,5 +1,8 @@
 {{#link-to 'team.breakdown'}}<h1>{{model.name}}</h1>{{/link-to}}
-{{manipulate-team team=model editName='editName' deleteTeam='deleteTeam'}}
+
+{{#if model.isEditable}}
+  {{manipulate-team team=model editName='editName' deleteTeam='deleteTeam'}}
+{{/if}}
 
 {{outlet}}
 

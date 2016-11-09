@@ -4,13 +4,19 @@ import Ember from 'ember';
 export default DS.Model.extend({
   name: DS.attr('string'),
   teamMembers: DS.hasMany('team-member'),
+  user: DS.belongsTo('user'),
+
+  auth: Ember.inject.service(),
+  isEditable: Ember.computed(function() {
+    return this.get('user').get('id').toString() === this.get('auth').get('credentials').get('id').toString();
+  }),
+
   isNotFull: Ember.computed('teamMembers', function(){
     return this.get('teamMembers').get('length') < 6;
   }),
   efficacy: Ember.computed('teamMembers.@each.pokemon', function () {
     let result = [];
     let members = this.get('teamMembers');
-    console.log(members.get('length'));
 
     members.forEach((member, memberIndex) => {
       let efficacies = member.get('pokemon').get('efficacy');
@@ -27,7 +33,6 @@ export default DS.Model.extend({
           result[index].damageFactor = oldFactor * newFactor;
         }
       });
-      console.log(member.get('pokemon').get('efficacy'));
     });
 
     return result;
