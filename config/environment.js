@@ -46,7 +46,7 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    ENV.baseURL = '/';
+    ENV.rootURL = '/destiny-knot-front-end';
     ENV.locationType = 'hash';
     ENV.apiHost = `https://destinyknot.herokuapp.com/`;
   }
