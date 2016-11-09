@@ -7,7 +7,7 @@ export default DS.Model.extend({
   isNotFull: Ember.computed('teamMembers', function(){
     return this.get('teamMembers').get('length') < 6;
   }),
-  efficacy: Ember.computed('teamMembers', function () {
+  efficacy: Ember.computed('teamMembers.@each.pokemon', function () {
     let result = [];
     let members = this.get('teamMembers');
     console.log(members.get('length'));
