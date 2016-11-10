@@ -3,10 +3,22 @@ import Ember from 'ember';
 
 export default DS.Model.extend({
   identifier: DS.attr('string'),
+  species_id: DS.attr('string'),
   types: DS.hasMany('type'),
   pokemon_stats: DS.hasMany('pokemon-stat'),
-  // teams: DS.hasMany('team'),
   abilities: DS.hasMany('ability'),
+  extension: Ember.computed(function() {
+    let result = '';
+    let split = this.get('identifier').split(/\s*\-\s*/g);
+    for (let i = 1; i < split.length; i++) {
+      if (split[i] !== 'oh' && split[i] !== 'z') {
+        result += '-';
+        result += split[i];
+      }
+    }
+    console.log(result);
+    return result;
+  }),
   efficacy: Ember.computed(function () {
     let result = [];
     let types = this.get('types');
@@ -39,7 +51,7 @@ export default DS.Model.extend({
         result[index].barMark = initial;
       }
     });
-    
+
     return result;
   })
 });

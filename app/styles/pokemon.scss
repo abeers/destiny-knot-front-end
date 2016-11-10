@@ -1,17 +1,20 @@
 body {
   background: $lightgray;
   font-family: $font-family;
-  padding-bottom: 80px;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 0 0 70px;
   text-transform: capitalize;
 }
 
 a {
-  color: green;
+  color: $green;
 }
 
 .app-title {
+  background-color: shade($lightgray, 20);
   color: $knotred;
-  font-size: $font-size;
+  font-size: 3 * $font-size;
   text-align: center;
 }
 
@@ -38,28 +41,32 @@ a {
   margin: 10px 0;
 }
 
+.add-pokemon-button {
+  color: $charcoal;
+}
+
 .pokemon-button-0 {
   background: $knotred;
 }
 
 .pokemon-button-1 {
-  background: orange;
+  background: $orange;
 }
 
 .pokemon-button-2 {
-  background: yellow;
+  background: $green;
 }
 
 .pokemon-button-3 {
-  background: green;
+  background: $teal;
 }
 
 .pokemon-button-4 {
-  background: blue;
+  background: $darkblue;
 }
 
 .pokemon-button-5 {
-  background: purple;
+  background: $purple;
 }
 
 .bar-wrap {
@@ -79,27 +86,27 @@ a {
 }
 
 .progress-marker-1 {
-  background: orange;
+  background: $orange;
   transform: rotate(-60deg);
 }
 
 .progress-marker-2 {
-  background: yellow;
+  background: $green;
   transform: rotate(40deg);
 }
 
 .progress-marker-3 {
-  background: green;
+  background: $teal;
   transform: rotate(-40deg);
 }
 
 .progress-marker-4 {
-  background: blue;
+  background: $darkblue;
   transform: rotate(20deg);
 }
 
 .progress-marker-5 {
-  background: purple;
+  background: $purple;
   transform: rotate(-20deg);
 }
 

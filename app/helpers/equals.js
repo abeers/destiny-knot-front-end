@@ -1,7 +1,6 @@
 import Ember from 'ember';
 
 export function equals(params) {
-  console.log(params);
   if (arguments.length < 2) {
     throw new Error("Handlebars Helper equal needs 2 parameters");
   }

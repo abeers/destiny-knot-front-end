@@ -1,9 +1,12 @@
 <div class="col-md-6">
   <h1>{{model.pokemon.identifier}}</h1>
-  {{delete-member member=model deletePokemon='deletePokemon'}}
-  {{pokemon-name-form member=model submit="submit" reset="reset"}}
 
-  <img src="https://veekun.com/dex/media/pokemon/main-sprites/omegaruby-alphasapphire/{{model.pokemon.id}}.png" />
+  {{#if model.isEditable}}
+    {{delete-member member=model deletePokemon='deletePokemon'}}
+    {{pokemon-name-form member=model submit="submit" reset="reset"}}
+  {{/if}}
+
+  <img src="https://veekun.com/dex/media/pokemon/main-sprites/omegaruby-alphasapphire/{{model.pokemon.species_id}}{{model.pokemon.extension}}.png" />
 
   <h2>
     {{#each model.pokemon.types as |type|}}
@@ -29,5 +32,6 @@
   <h1>Type Effectiveness</h1>
   {{#each model.pokemon.efficacy as |efficacy|}}
     <h4>{{efficacy.damageType}}: {{efficacy.damageFactor}}</h4>
+    {{type-bar-ind efficacy=efficacy}}
   {{/each}}
 </div>
