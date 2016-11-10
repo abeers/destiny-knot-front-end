@@ -2,34 +2,7 @@
 <div class="col-md-12">
   <h1>Type Effectiveness</h1>
   <h2>{{team.name}}</h2>
-  {{#each team.efficacy as |efficacy|}}
-    <h4>{{efficacy.damageType}}: {{efficacy.damageFactor}}</h4>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="bar-wrap">
-          <div class="progress no-extra-space"></div>
-          <div style="right:{{efficacy.barMark}}%" class="progress-marker"></div>
-          <!-- <div style="right:25%" class="progress-marker"></div>
-          <div style="right:37.5%" class="progress-marker"></div>
-          <div style="right:50%" class="progress-marker"></div>
-          <div style="right:62.5%" class="progress-marker"></div>
-          <div style="right:75%" class="progress-marker"></div>
-          <div style="right:87.5%" class="progress-marker"></div> -->
-        </div>
-      </div>
-      <div class="row">
-        <div class="time-axis">
-          <div class="time-spot-end">1/16</div>
-          <div class="time-spot text-center">1/8</div>
-          <div class="time-spot text-center">1/4</div>
-          <div class="time-spot text-center">1/2</div>
-          <div class="time-spot text-center">1</div>
-          <div class="time-spot text-center">2</div>
-          <div class="time-spot text-center">4</div>
-          <div class="time-spot text-center">8</div>
-          <div class="time-spot-end text-right">16</div>
-        </div>
-      </div>
-    </div>
-  {{/each}}
+
+  {{type-bar team=team}}
+
 </div>

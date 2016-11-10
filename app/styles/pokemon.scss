@@ -9,10 +9,6 @@ a {
   color: green;
 }
 
-.btn {
-  margin: 10px 0;
-}
-
 .app-title {
   color: $knotred;
   font-size: $font-size;
@@ -23,8 +19,35 @@ a {
   background: $black;
 }
 
+.btn {
+  color: $white;
+  margin: 10px 0;
+  // text-shadow: .1em .1em $black, -.1em -.1em $black, -.1em .1em $black, .1em -.1em $black;
+}
 
+.pokemon-button-0 {
+  background: $knotred;
+}
 
+.pokemon-button-1 {
+  background: orange;
+}
+
+.pokemon-button-2 {
+  background: yellow;
+}
+
+.pokemon-button-3 {
+  background: green;
+}
+
+.pokemon-button-4 {
+  background: blue;
+}
+
+.pokemon-button-5 {
+  background: purple;
+}
 
 .bar-wrap {
   position: relative;
@@ -34,8 +57,42 @@ a {
   width: 4px;
   height: 25px;
   position: absolute;
-  background: $knotred;
   bottom: -5px;
+}
+
+.progress-marker-0 {
+  background: $knotred;
+  transform: rotate(60deg);
+}
+
+.progress-marker-1 {
+  background: orange;
+  transform: rotate(-60deg);
+}
+
+.progress-marker-2 {
+  background: yellow;
+  transform: rotate(40deg);
+}
+
+.progress-marker-3 {
+  background: green;
+  transform: rotate(-40deg);
+}
+
+.progress-marker-4 {
+  background: blue;
+  transform: rotate(20deg);
+}
+
+.progress-marker-5 {
+  background: purple;
+  transform: rotate(-20deg);
+}
+
+.progress-marker-team {
+  background: $black;
+  width: 6px;
 }
 
 .time-axis {
@@ -43,7 +100,6 @@ a {
   display: block;
   float: left;
   width: 100%;
-  /*margin: 0px 0 10px 0;*/
 }
 
 .time-spot {

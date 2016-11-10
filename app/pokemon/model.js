@@ -29,6 +29,17 @@ export default DS.Model.extend({
 
     });
 
+    result.forEach((efficacy, index) => {
+      let initial = -12.5 * Math.log2(efficacy.damageFactor) + 50;
+      if (initial < 0) {
+        result[index].barMark = 0;
+      } else if (initial > 100) {
+        result[index].barMark = 100;
+      } else {
+        result[index].barMark = initial;
+      }
+    });
+    
     return result;
   })
 });

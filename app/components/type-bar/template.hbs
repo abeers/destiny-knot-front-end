@@ -1,0 +1,32 @@
+
+{{#each team.efficacy as |efficacy|}}
+  <h4>{{efficacy.damageType}}: {{efficacy.damageFactor}}</h4>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="bar-wrap">
+        <div class="progress no-extra-space"></div>
+        {{#each team.teamMembers as |member index|}}
+          {{#each member.pokemon.efficacy as |mefficacy|}}
+            {{#if (equals mefficacy.damageType efficacy.damageType)}}
+              <div style="right:{{mefficacy.barMark}}%" class="progress-marker progress-marker-{{index}}"></div>
+            {{/if}}
+          {{/each}}
+        {{/each}}
+        <div style="right:{{efficacy.barMark}}%" class="progress-marker progress-marker-team"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="time-axis">
+        <div class="time-spot-end">1/16</div>
+        <div class="time-spot text-center">1/8</div>
+        <div class="time-spot text-center">1/4</div>
+        <div class="time-spot text-center">1/2</div>
+        <div class="time-spot text-center">1</div>
+        <div class="time-spot text-center">2</div>
+        <div class="time-spot text-center">4</div>
+        <div class="time-spot text-center">8</div>
+        <div class="time-spot-end text-right">16</div>
+      </div>
+    </div>
+  </div>
+{{/each}}
