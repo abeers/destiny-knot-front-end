@@ -1,14 +1,13 @@
-<h2>Teams</h2>
-{{create-team createTeam='createTeam'}}
+<div class="col-md-8 col-md-offset-2">
+  <h2>Teams</h2>
+  {{create-team createTeam='createTeam'}}
 
-<ul>
-{{#each model as |team|}}
-  {{#link-to 'team.breakdown' team}}
-    <li>{{team.name}}</li>
-  {{/link-to}}
-{{/each}}
-</ul>
+  <ul>
+  {{#each model as |team|}}
+    {{#link-to 'team.breakdown' team}}
+      <li>{{team.name}}</li>
+    {{/link-to}}
+  {{/each}}
+  </ul>
 
-<p>
-  {{#link-to 'application'}}Back to home{{/link-to}}
-</p>
+</div>

@@ -11,10 +11,18 @@ a {
   color: $green;
 }
 
+.welcome {
+  background: url('images/meadow-background.jpg') no-repeat;
+  background-size: cover;
+  margin: -25px 1px -80px;
+  min-height: 100vh;
+  // overflow-y: hidden;
+}
+
 .app-title {
-  background-color: shade($lightgray, 20);
-  color: $knotred;
+  color: $white;
   font-size: 3 * $font-size;
+  padding: 60px;
   text-align: center;
 }
 
@@ -22,9 +30,10 @@ a {
   background: $black;
 }
 
-.btn {
-
-  // text-shadow: .1em .1em $black, -.1em -.1em $black, -.1em .1em $black, .1em -.1em $black;
+.intro-paragraph {
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 1.2 * $font-size;
+  text-transform: none;
 }
 
 .breakdown-name {
