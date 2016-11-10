@@ -20,9 +20,22 @@ a {
 }
 
 .btn {
+
+  // text-shadow: .1em .1em $black, -.1em -.1em $black, -.1em .1em $black, .1em -.1em $black;
+}
+
+.breakdown-name {
+  color: blue;
+}
+
+.breakdown-type {
+  font-weight: 800;
+  margin: 40px 0 25px;
+}
+
+.pokemon-button {
   color: $white;
   margin: 10px 0;
-  // text-shadow: .1em .1em $black, -.1em -.1em $black, -.1em .1em $black, .1em -.1em $black;
 }
 
 .pokemon-button-0 {
@@ -54,8 +67,8 @@ a {
 }
 
 .progress-marker {
-  width: 4px;
-  height: 25px;
+  width: 3px;
+  height: 40px;
   position: absolute;
   bottom: -5px;
 }
@@ -91,7 +104,9 @@ a {
 }
 
 .progress-marker-team {
-  background: $black;
+  background: $white;
+  border: 2px solid $black;
+  height: 50px;
   width: 6px;
 }
 

@@ -1,5 +1,5 @@
 {{#each team.teamMembers as |member index|}}
   {{#link-to 'team.pokemon' member}}
-    <btn class="col-md-2 btn btn-default pokemon-button-{{index}}">{{member.pokemon.identifier}}</btn>
+    <btn class="col-md-2 btn btn-default pokemon-button pokemon-button-{{index}}">{{member.pokemon.identifier}}</btn>
   {{/link-to}}
 {{/each}}
