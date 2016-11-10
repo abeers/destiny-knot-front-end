@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model () {
+    this.get('store').findAll('type');
     return this.get('store').findAll('team');
   },
   actions: {

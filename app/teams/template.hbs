@@ -2,12 +2,13 @@
   <h2>Teams</h2>
   {{create-team createTeam='createTeam'}}
 
-  <ul>
   {{#each model as |team|}}
     {{#link-to 'team.breakdown' team}}
-      <li>{{team.name}}</li>
+    <div class="team-card">
+      <h3>{{team.name}}</h3>
+      <h4>{{team.teamMembers.length}} Pokemon</h4>
+    </div>
     {{/link-to}}
   {{/each}}
-  </ul>
 
 </div>

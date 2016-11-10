@@ -8,7 +8,7 @@ body {
 }
 
 a {
-  color: $green;
+  color: $knotred;
 }
 
 .welcome {
@@ -28,6 +28,13 @@ a {
 
 .navbar {
   background: $black;
+}
+
+.team-card {
+  background: $white;
+  margin: 20px 0;
+  padding: 20px;
+  text-align: center;
 }
 
 .intro-paragraph {
