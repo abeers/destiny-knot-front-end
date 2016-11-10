@@ -16,7 +16,6 @@ export default DS.Model.extend({
         result += split[i];
       }
     }
-    console.log(result);
     return result;
   }),
   efficacy: Ember.computed(function () {

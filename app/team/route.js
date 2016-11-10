@@ -13,7 +13,6 @@ export default Ember.Route.extend({
         return newMember.save();
       })
       .then((record) => {
-        console.log(record.get('id'));
         this.transitionTo('team.pokemon', record.get('id'));
       })
       .catch(() => {
